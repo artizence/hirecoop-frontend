@@ -1,0 +1,21 @@
+{
+  "name": "dukaneasy",
+  "version": "1.0.0",
+  "description": "Frontend for dukan easy",
+  "main": "index.js",
+  "scripts": {
+    "dev": "postcss assets/css/main.css -o assets/css/style.css",
+    "tailcss": "postcss assets/css/main.css -o assets/css/style.css"
+  },
+  "author": "Rohit Mishra",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.7",
+    "postcss": "^8.4.13",
+    "tailwindcss": "^3.0.24"
+  },
+  "dependencies": {
+    "nodemon": "^2.0.16",
+    "postcss-cli": "^9.1.0"
+  }
+}
