@@ -5,249 +5,382 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
-    <title>Hirecoop</title>
+    <title>Hirecoop - The future</title>
 </head>
 
-<body class="bg-slate-100 overflow-x-hidden">
-
-    <div>
-        <nav class="bg-white dark:bg-gray-800 shadow-sm">
-            <div class="mx-auto px-12">
-                <div class="flex items-center justify-between h-16">
-                    <div class=" flex items-center">
-                        <a class="flex-shrink-0 flex" href="/">
-                            <img class="h-9 w-9" src="assets/images/logo.svg" alt="Workflow" />
-                            <span
-                                class="text-gray-900 block px-3 py-2 rounded-md text-base font-medium">Artizence</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="block">
-                    <div class="ml-4 flex items-center md:ml-6">
-                    </div>
-                </div>
-                <div class="-mr-2 flex md:hidden">
-                    <button
-                        class="text-gray-800 dark:text-white hover:text-gray-300 inline-flex items-center justify-center p-2 rounded-md focus:outline-none">
-                        <svg width="20" height="20" fill="currentColor" class="h-8 w-8" viewBox="0 0 1792 1792"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M1664 1344v128q0 26-19 45t-45 19h-1408q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45zm0-512v128q0 26-19 45t-45 19h-1408q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45zm0-512v128q0 26-19 45t-45 19h-1408q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45z">
-                            </path>
-                        </svg>
-                    </button>
-                </div>
+<body>
+    <div class='bg-slate-100 min-h-screen w-full'>
+        <!-- -------logHeader---------- -->
+        <div
+            class='w-full max-h-20 px-5 lg:px-20 md:px-10 py-5 flex justify-between bg-white 2xl:max-w-[1550px] m-auto'>
+            <Link href="/dashboard">
+            <div class='flex'>
+                <img src="/assets/images/logo.svg" alt="Logo" class="h-9 w-9 mr-1" />
+                <h3 class='text-xl font-medium mt-1 font-inter'>Hireoop</h3>
             </div>
-    </div>
-    <div class="md:hidden">
-        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <a class="text-gray-300 hover:text-gray-800 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-                href="/#">
-                Home
-            </a>
-            <a class="text-gray-800 dark:text-white block px-3 py-2 rounded-md text-base font-medium" href="/#">
-                Gallery
-            </a>
-            <a class="text-gray-300 hover:text-gray-800 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-                href="/#">
-                Content
-            </a>
-            <a class="text-gray-300 hover:text-gray-800 dark:hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-                href="/#">
-                Contact
-            </a>
+            </Link>
+            <div class="md:hidden h-8">
+                <button class="text-secondary-black focus:outline-none" id="sidemenubtn" onClick="toggleSideMenu()">
+                    <svg class="h-10 w-10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 6H20M4 12H20M4 18H20" stroke="currentColor" strokeWidth="2" strokeLinecap="round"
+                            strokeLinejoin="round">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+            <div class='hidden md:flex space-x-2'>
+                <div class='h-8 w-8 rounded-full cursor-pointer bg-blue-600'></div>
+            </div>
         </div>
-    </div>
-    </nav>
-    </div>
 
-    <div class="flex flex-row h-full">
-        <nav class="bg-white dark:bg-gray-800 w-20 h-screen justify-between flex flex-col">
-            <div class="mt-5 mb-10">
-                <div class="mt-5">
-                    <ul>
-                        <li class="my-12 text-center">
-                            <a href="#">
-                                <span
-                                    class="h-6 w-6 text-gray-500 dark:text-gray-300 mx-auto hover:text-gray-800 dark:hover:text-white transition-colors duration-200">
-                                    <?xml version="1.0" ?><svg height="20" viewBox="0 0 48 48" width="20"
-                                        fill="currentColor" class="m-auto" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M0 0h48v48H0z" fill="none" />
-                                        <path
-                                            d="M6 26h16V6H6v20zm0 16h16V30H6v12zm20 0h16V22H26v20zm0-36v12h16V6H26z" />
-                                    </svg>
-                                </span>
-                            </a>
-                        </li>
-                        <li class="my-12 text-center">
-                            <a href="#">
-                                <span
-                                    class="h-6 w-6 text-gray-500 dark:text-gray-300 mx-auto hover:text-gray-800 dark:hover:text-white transition-colors duration-200">
-                                    <?xml version="1.0" ?><svg height="20px" version="1.1" viewBox="0 0 20 20"
-                                        class="m-auto" width="20px" xmlns="http://www.w3.org/2000/svg"
-                                        xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
-                                        xmlns:xlink="http://www.w3.org/1999/xlink">
-                                        <title />
-                                        <desc />
-                                        <defs />
-                                        <g fill="none" fill-rule="evenodd" id="Page-1" stroke="none" stroke-width="1">
-                                            <g fill="currentColor" id="Core"
-                                                transform="translate(-86.000000, -2.000000)">
-                                                <g id="account-circle" transform="translate(86.000000, 2.000000)">
-                                                    <path
-                                                        d="M10,0 C4.5,0 0,4.5 0,10 C0,15.5 4.5,20 10,20 C15.5,20 20,15.5 20,10 C20,4.5 15.5,0 10,0 L10,0 Z M10,3 C11.7,3 13,4.3 13,6 C13,7.7 11.7,9 10,9 C8.3,9 7,7.7 7,6 C7,4.3 8.3,3 10,3 L10,3 Z M10,17.2 C7.5,17.2 5.3,15.9 4,14 C4,12 8,10.9 10,10.9 C12,10.9 16,12 16,14 C14.7,15.9 12.5,17.2 10,17.2 L10,17.2 Z"
-                                                        id="Shape" />
-                                                </g>
-                                            </g>
-                                        </g>
-                                    </svg>
-                                </span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        <div class="w-full">
 
-            <h1 class="text-2xl ml-8 mt-4 w-full">Hi Akshat</h1>
-            <button type="button"
-                class="text-blue-700 w-max mr-20 relative -top-7 float-right hover:text-white border border-purple-700 hover:bg-purple-800 focus:ring-4 focus:outline-none focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mb-2 dark:border-purple-500 dark:text-purple-500 dark:hover:text-white dark:hover:bg-purple-600 dark:focus:ring-purple-800">
-                Share
-                <?xml version="1.0" ?><svg class="w-5 h-5 ml-2 -mr-1 float-right" fill="currentColor"
-                    viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-                    <defs>
-                        <style>
-                            .cls-1 {
-                                fill: #0e6ae0;
-                            }
+        <!-- -------Main Content------------>
+        <div class='flex w-full 2xl:max-w-[1550px] m-auto'>
 
-                            .cls-2 {
-                                fill: #0593ff;
-                            }
-                        </style>
-                    </defs>
-                    <title />
-                    <g data-name="Share" id="Share-2">
-                        <path class="cls-1"
-                            d="M13.41,15.59a1,1,0,0,1-.7-.3,1,1,0,0,1,0-1.41l5.17-5.17a1,1,0,1,1,1.41,1.41l-5.17,5.17A1,1,0,0,1,13.41,15.59Z" />
-                        <path class="cls-1"
-                            d="M18.59,23.59a1,1,0,0,1-.71-.3l-5.17-5.17a1,1,0,1,1,1.41-1.41l5.17,5.17a1,1,0,0,1,0,1.41A1,1,0,0,1,18.59,23.59Z" />
-                        <circle class="cls-2" cx="20" cy="8" r="3" />
-                        <circle class="cls-2" cx="12" cy="16" r="3" />
-                        <circle class="cls-2" cx="20" cy="24" r="3" />
-                    </g>
-                </svg>
-            </button>
-            <div class="w-full flex">
-                <div class="container px-4 sm:px-8 max-w-md">
-                    <div class="py-8 bg-white h-min px-10 rounded-lg">
-                        <h3>List of Candidates</h3>
-                        <div class="h-[1px] w-full mt-4 bg-gray-200"></div>
-                        <table class="min-w-full leading-normal">
-                            <tbody>
-                                <tr>
-                                    <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                                        <p class="text-gray-900 whitespace-no-wrap">
-                                            Rohit Mishra
-                                        </p>
-                                    </td>
-                                    <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                                        <p class="text-gray-900 whitespace-no-wrap">
-                                            70%
-                                        </p>
-                                    </td>
-                                    <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                                        <p class="text-green-600 whitespace-no-wrap">
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"
-                                                class="w-5 h-5 ml-2" fill="currentColor">
-                                                <path
-                                                    d="M438.6 105.4C451.1 117.9 451.1 138.1 438.6 150.6L182.6 406.6C170.1 419.1 149.9 419.1 137.4 406.6L9.372 278.6C-3.124 266.1-3.124 245.9 9.372 233.4C21.87 220.9 42.13 220.9 54.63 233.4L159.1 338.7L393.4 105.4C405.9 92.88 426.1 92.88 438.6 105.4H438.6z" />
-                                            </svg>
-                                        </p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                                        <p class="text-gray-900 whitespace-no-wrap">
-                                            Zaid Anwar
-                                        </p>
-                                    </td>
-                                    <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                                        <p class="text-gray-900 whitespace-no-wrap">
-                                            85%
-                                        </p>
-                                    </td>
-                                    <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                                        <p class="text-green-600 whitespace-no-wrap">
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"
-                                                class="w-5 h-5 ml-2" fill="currentColor">
-                                                <path
-                                                    d="M438.6 105.4C451.1 117.9 451.1 138.1 438.6 150.6L182.6 406.6C170.1 419.1 149.9 419.1 137.4 406.6L9.372 278.6C-3.124 266.1-3.124 245.9 9.372 233.4C21.87 220.9 42.13 220.9 54.63 233.4L159.1 338.7L393.4 105.4C405.9 92.88 426.1 92.88 438.6 105.4H438.6z" />
-                                            </svg>
-                                        </p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                                        <p class="text-gray-900 whitespace-no-wrap">
-                                            Akshat Srivastav
-                                        </p>
-                                    </td>
-                                    <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                                        <p class="text-gray-900 whitespace-no-wrap">
-                                            10%
-                                        </p>
-                                    </td>
-                                    <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                                        <p class="text-red-600 whitespace-no-wrap">
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"
-                                                class="w-5 h-5 ml-2" fill="currentColor">
-                                                <path
-                                                    d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z" />
-                                            </svg>
-                                        </p>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
 
-                <div class="container px-4 sm:px-8 max-w-full">
-                    <div class="py-8 bg-white h-min px-10 rounded-lg">
-                        <h3 class="text-2xl">Rohit Mishra</h3>
-                        <h4>Front End Dev</h4>
-                        <h4 class="text-6xl float-right relative -top-16">70%</h4>
-                        <div class="h-[1px] w-full my-4 bg-gray-200"></div>
-                        <p>He is a freelancer programmer Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                            Provident tempore similique aut voluptatem odit atque voluptatibus consequatur quae harum
-                            sit deserunt laborum dicta natus, voluptate vitae quisquam accusantium corporis asperiores.
-                        </p>
-                        <div class="font-bold mt-5">Skills</div>
-                        <p>Next JS, React JS, Swift, Rohitlang, Php ...</p>
-                        <div class="font-bold mt-5">Contacts</div>
-                        <p>Add- Shanti Nagar, Siwan, North Carolina, USA</p>
-                        <p>Email - rohit@artizence.com</p>
-                        <p>Mo - 9123155216</p>
-                        <button type="button"
-                            class="focus:outline-none mt-5 text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-800">
+
+            <div class="py-8 w-full px-2 sm:px-4 lg:px-10 ">
+                <div class='w-full lg:flex'>
+
+
+                    <div class='w-full md:max-h-[700px] bg-white mt-8 p-4 rounded-lg'>
+                        <div class='md:flex'>
+                            <div class='flex'>
+                                <div class='h-20 w-20 bg-gradient-to-tr from-yellow-500 to-green-500 rounded-full'>
+                                </div>
+                                <div class='pl-5'>
+                                    <div class='mt-2 text-xl font-medium'>Rohit Mishra</div>
+                                    <div class='text-xl'>Full Stack Developer</div>
+                                </div>
+                            </div>
+                            <div class='pl-5'>
+                                <div class='mt-2 text-2xl font-medium text-green-500'>Qualified</div>
+                            </div>
+                            <div class='w-max ml-auto mr-10 relative -top-14 md:top-0'>
+                                <div class=''>Match</div>
+                                <div class='text-5xl m-0'>86%</div>
+                            </div>
+                        </div>
+                        <div class='w-full sm:w-4/5 text-lg sm:mt-5'>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis quia nam esse, earum
+                            laboriosam culpa excepturi eligendi dolore! Velit aut id nesciunt accusamus suscipit, sunt
+                            expedita, obcaecati laboriosam mollitia exercitationem error incidunt voluptate placeat
+                            veniam necessitatibus omnis, magnam pariatur eius.
+                        </div>
+                        <div class='w-full sm:w-4/5 text-lg mt-4 font-medium'>
+                            Skills
+                        </div>
+                        <div class='w-full sm:w-4/5 text-lg'>
+                            Lorem Ipsum is simply dummy text of the printing
+                        </div>
+                        <div class='w-full sm:w-4/5 text-lg mt-4 font-medium'>
+                            Experience: <span class='font-normal'>142 Years</span>
+                        </div>
+                        <div class='w-full sm:w-4/5 text-lg mt-4 font-medium'>
+                            Contacts
+                        </div>
+                        <div class='w-full sm:w-4/5 text-lg'>
+                            Phone: 9123155216
+                        </div>
+                        <div class='w-full sm:w-4/5 text-lg'>
+                            Email: rohit@artizence.com
+                        </div>
+                        <div class='w-full sm:w-4/5 text-lg mb-4'>
+                            Add: Purani Haweli, New York, Mars
+                        </div>
+                        <button
+                            class="flex-shrink-0 px-4 py-2 text-base font-semibold text-white bg-purple-600 rounded-lg shadow-md hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-purple-200"
+                            type="submit">
                             Shortlist
                         </button>
                     </div>
+                    <div class='w-5'></div>
+                    <div class='w-full lg:w-[60%] xl:w-[50%] max-h-auto md:max-h-[700px] lg:max-h-[600px] bg-white mt-8 p-2 sm:p-4 rounded-lg overflow-hidden'>
+                        <div class='text-xl mt-3 mb-1 font-medium'>Questions performance</div>
+                        <div class='h-[1px] bg-gray-300 w-full'></div>
+                        <div class="w-full h-full overflow-y-auto">
+
+                            <div class='flex w-full py-2 hover:bg-gray-100 rounded-md cursor-pointer'>
+                                <div class='w-10'>#1</div>
+                                <div class='w-full'>What is JavaScript?</div>
+                                <a href="#">
+                                    <div class='w-24 text-blue-500 flex'>view
+                                        <svg viewBox="0 0 32 32" class="h-5 relative top-1 ml-2" fill="currentColor"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <title />
+                                            <g data-name="Layer 2" id="Layer_2">
+                                                <path
+                                                    d="M22,9a1,1,0,0,0,0,1.42l4.6,4.6H3.06a1,1,0,1,0,0,2H26.58L22,21.59A1,1,0,0,0,22,23a1,1,0,0,0,1.41,0l6.36-6.36a.88.88,0,0,0,0-1.27L23.42,9A1,1,0,0,0,22,9Z" />
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class='flex w-full py-2 hover:bg-gray-100 rounded-md cursor-pointer'>
+                                <div class='w-10'>#2</div>
+                                <div class='w-full'>What is JavaScript?</div>
+                                <a href="#">
+                                    <div class='w-24 text-blue-500 flex'>view
+                                        <svg viewBox="0 0 32 32" class="h-5 relative top-1 ml-2" fill="currentColor"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <title />
+                                            <g data-name="Layer 2" id="Layer_2">
+                                                <path
+                                                    d="M22,9a1,1,0,0,0,0,1.42l4.6,4.6H3.06a1,1,0,1,0,0,2H26.58L22,21.59A1,1,0,0,0,22,23a1,1,0,0,0,1.41,0l6.36-6.36a.88.88,0,0,0,0-1.27L23.42,9A1,1,0,0,0,22,9Z" />
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class='flex w-full py-2 hover:bg-gray-100 rounded-md cursor-pointer'>
+                                <div class='w-10'>#3</div>
+                                <div class='w-full'>What is JavaScript?</div>
+                                <a href="#">
+                                    <div class='w-24 text-blue-500 flex'>view
+                                        <svg viewBox="0 0 32 32" class="h-5 relative top-1 ml-2" fill="currentColor"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <title />
+                                            <g data-name="Layer 2" id="Layer_2">
+                                                <path
+                                                    d="M22,9a1,1,0,0,0,0,1.42l4.6,4.6H3.06a1,1,0,1,0,0,2H26.58L22,21.59A1,1,0,0,0,22,23a1,1,0,0,0,1.41,0l6.36-6.36a.88.88,0,0,0,0-1.27L23.42,9A1,1,0,0,0,22,9Z" />
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class='flex w-full py-2 hover:bg-gray-100 rounded-md cursor-pointer'>
+                                <div class='w-10'>#4</div>
+                                <div class='w-full'>What is JavaScript?</div>
+                                <a href="#">
+                                    <div class='w-24 text-blue-500 flex'>view
+                                        <svg viewBox="0 0 32 32" class="h-5 relative top-1 ml-2" fill="currentColor"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <title />
+                                            <g data-name="Layer 2" id="Layer_2">
+                                                <path
+                                                    d="M22,9a1,1,0,0,0,0,1.42l4.6,4.6H3.06a1,1,0,1,0,0,2H26.58L22,21.59A1,1,0,0,0,22,23a1,1,0,0,0,1.41,0l6.36-6.36a.88.88,0,0,0,0-1.27L23.42,9A1,1,0,0,0,22,9Z" />
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class='flex w-full py-2 hover:bg-gray-100 rounded-md cursor-pointer'>
+                                <div class='w-10'>#5</div>
+                                <div class='w-full'>What is JavaScript?</div>
+                                <a href="#">
+                                    <div class='w-24 text-blue-500 flex'>view
+                                        <svg viewBox="0 0 32 32" class="h-5 relative top-1 ml-2" fill="currentColor"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <title />
+                                            <g data-name="Layer 2" id="Layer_2">
+                                                <path
+                                                    d="M22,9a1,1,0,0,0,0,1.42l4.6,4.6H3.06a1,1,0,1,0,0,2H26.58L22,21.59A1,1,0,0,0,22,23a1,1,0,0,0,1.41,0l6.36-6.36a.88.88,0,0,0,0-1.27L23.42,9A1,1,0,0,0,22,9Z" />
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class='flex w-full py-2 hover:bg-gray-100 rounded-md cursor-pointer'>
+                                <div class='w-10'>#1</div>
+                                <div class='w-full'>What is JavaScript?</div>
+                                <a href="#">
+                                    <div class='w-24 text-blue-500 flex'>view
+                                        <svg viewBox="0 0 32 32" class="h-5 relative top-1 ml-2" fill="currentColor"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <title />
+                                            <g data-name="Layer 2" id="Layer_2">
+                                                <path
+                                                    d="M22,9a1,1,0,0,0,0,1.42l4.6,4.6H3.06a1,1,0,1,0,0,2H26.58L22,21.59A1,1,0,0,0,22,23a1,1,0,0,0,1.41,0l6.36-6.36a.88.88,0,0,0,0-1.27L23.42,9A1,1,0,0,0,22,9Z" />
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class='flex w-full py-2 hover:bg-gray-100 rounded-md cursor-pointer'>
+                                <div class='w-10'>#1</div>
+                                <div class='w-full'>What is JavaScript?</div>
+                                <a href="#">
+                                    <div class='w-24 text-blue-500 flex'>view
+                                        <svg viewBox="0 0 32 32" class="h-5 relative top-1 ml-2" fill="currentColor"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <title />
+                                            <g data-name="Layer 2" id="Layer_2">
+                                                <path
+                                                    d="M22,9a1,1,0,0,0,0,1.42l4.6,4.6H3.06a1,1,0,1,0,0,2H26.58L22,21.59A1,1,0,0,0,22,23a1,1,0,0,0,1.41,0l6.36-6.36a.88.88,0,0,0,0-1.27L23.42,9A1,1,0,0,0,22,9Z" />
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class='flex w-full py-2 hover:bg-gray-100 rounded-md cursor-pointer'>
+                                <div class='w-10'>#1</div>
+                                <div class='w-full'>What is JavaScript?</div>
+                                <a href="#">
+                                    <div class='w-24 text-blue-500 flex'>view
+                                        <svg viewBox="0 0 32 32" class="h-5 relative top-1 ml-2" fill="currentColor"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <title />
+                                            <g data-name="Layer 2" id="Layer_2">
+                                                <path
+                                                    d="M22,9a1,1,0,0,0,0,1.42l4.6,4.6H3.06a1,1,0,1,0,0,2H26.58L22,21.59A1,1,0,0,0,22,23a1,1,0,0,0,1.41,0l6.36-6.36a.88.88,0,0,0,0-1.27L23.42,9A1,1,0,0,0,22,9Z" />
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class='flex w-full py-2 hover:bg-gray-100 rounded-md cursor-pointer'>
+                                <div class='w-10'>#1</div>
+                                <div class='w-full'>What is JavaScript?</div>
+                                <a href="#">
+                                    <div class='w-24 text-blue-500 flex'>view
+                                        <svg viewBox="0 0 32 32" class="h-5 relative top-1 ml-2" fill="currentColor"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <title />
+                                            <g data-name="Layer 2" id="Layer_2">
+                                                <path
+                                                    d="M22,9a1,1,0,0,0,0,1.42l4.6,4.6H3.06a1,1,0,1,0,0,2H26.58L22,21.59A1,1,0,0,0,22,23a1,1,0,0,0,1.41,0l6.36-6.36a.88.88,0,0,0,0-1.27L23.42,9A1,1,0,0,0,22,9Z" />
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class='flex w-full py-2 hover:bg-gray-100 rounded-md cursor-pointer'>
+                                <div class='w-10'>#1</div>
+                                <div class='w-full'>What is JavaScript?</div>
+                                <a href="#">
+                                    <div class='w-24 text-blue-500 flex'>view
+                                        <svg viewBox="0 0 32 32" class="h-5 relative top-1 ml-2" fill="currentColor"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <title />
+                                            <g data-name="Layer 2" id="Layer_2">
+                                                <path
+                                                    d="M22,9a1,1,0,0,0,0,1.42l4.6,4.6H3.06a1,1,0,1,0,0,2H26.58L22,21.59A1,1,0,0,0,22,23a1,1,0,0,0,1.41,0l6.36-6.36a.88.88,0,0,0,0-1.27L23.42,9A1,1,0,0,0,22,9Z" />
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class='flex w-full py-2 hover:bg-gray-100 rounded-md cursor-pointer'>
+                                <div class='w-10'>#1</div>
+                                <div class='w-full'>What is JavaScript?</div>
+                                <a href="#">
+                                    <div class='w-24 text-blue-500 flex'>view
+                                        <svg viewBox="0 0 32 32" class="h-5 relative top-1 ml-2" fill="currentColor"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <title />
+                                            <g data-name="Layer 2" id="Layer_2">
+                                                <path
+                                                    d="M22,9a1,1,0,0,0,0,1.42l4.6,4.6H3.06a1,1,0,1,0,0,2H26.58L22,21.59A1,1,0,0,0,22,23a1,1,0,0,0,1.41,0l6.36-6.36a.88.88,0,0,0,0-1.27L23.42,9A1,1,0,0,0,22,9Z" />
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class='flex w-full py-2 hover:bg-gray-100 rounded-md cursor-pointer'>
+                                <div class='w-10'>#1</div>
+                                <div class='w-full'>What is JavaScript?</div>
+                                <a href="#">
+                                    <div class='w-24 text-blue-500 flex'>view
+                                        <svg viewBox="0 0 32 32" class="h-5 relative top-1 ml-2" fill="currentColor"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <title />
+                                            <g data-name="Layer 2" id="Layer_2">
+                                                <path
+                                                    d="M22,9a1,1,0,0,0,0,1.42l4.6,4.6H3.06a1,1,0,1,0,0,2H26.58L22,21.59A1,1,0,0,0,22,23a1,1,0,0,0,1.41,0l6.36-6.36a.88.88,0,0,0,0-1.27L23.42,9A1,1,0,0,0,22,9Z" />
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class='flex w-full py-2 hover:bg-gray-100 rounded-md cursor-pointer'>
+                                <div class='w-10'>#1</div>
+                                <div class='w-full'>What is JavaScript?</div>
+                                <a href="#">
+                                    <div class='w-24 text-blue-500 flex'>view
+                                        <svg viewBox="0 0 32 32" class="h-5 relative top-1 ml-2" fill="currentColor"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <title />
+                                            <g data-name="Layer 2" id="Layer_2">
+                                                <path
+                                                    d="M22,9a1,1,0,0,0,0,1.42l4.6,4.6H3.06a1,1,0,1,0,0,2H26.58L22,21.59A1,1,0,0,0,22,23a1,1,0,0,0,1.41,0l6.36-6.36a.88.88,0,0,0,0-1.27L23.42,9A1,1,0,0,0,22,9Z" />
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class='flex w-full py-2 hover:bg-gray-100 rounded-md cursor-pointer'>
+                                <div class='w-10'>#1</div>
+                                <div class='w-full'>What is JavaScript?</div>
+                                <a href="#">
+                                    <div class='w-24 text-blue-500 flex'>view
+                                        <svg viewBox="0 0 32 32" class="h-5 relative top-1 ml-2" fill="currentColor"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <title />
+                                            <g data-name="Layer 2" id="Layer_2">
+                                                <path
+                                                    d="M22,9a1,1,0,0,0,0,1.42l4.6,4.6H3.06a1,1,0,1,0,0,2H26.58L22,21.59A1,1,0,0,0,22,23a1,1,0,0,0,1.41,0l6.36-6.36a.88.88,0,0,0,0-1.27L23.42,9A1,1,0,0,0,22,9Z" />
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class='flex w-full py-2 hover:bg-gray-100 rounded-md cursor-pointer'>
+                                <div class='w-10'>#1</div>
+                                <div class='w-full'>What is JavaScript?</div>
+                                <a href="#">
+                                    <div class='w-24 text-blue-500 flex'>view
+                                        <svg viewBox="0 0 32 32" class="h-5 relative top-1 ml-2" fill="currentColor"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <title />
+                                            <g data-name="Layer 2" id="Layer_2">
+                                                <path
+                                                    d="M22,9a1,1,0,0,0,0,1.42l4.6,4.6H3.06a1,1,0,1,0,0,2H26.58L22,21.59A1,1,0,0,0,22,23a1,1,0,0,0,1.41,0l6.36-6.36a.88.88,0,0,0,0-1.27L23.42,9A1,1,0,0,0,22,9Z" />
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class='flex w-full py-2 hover:bg-gray-100 rounded-md cursor-pointer'>
+                                <div class='w-10'>#1</div>
+                                <div class='w-full'>What is JavaScript?</div>
+                                <a href="#">
+                                    <div class='w-24 text-blue-500 flex'>view
+                                        <svg viewBox="0 0 32 32" class="h-5 relative top-1 ml-2" fill="currentColor"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <title />
+                                            <g data-name="Layer 2" id="Layer_2">
+                                                <path
+                                                    d="M22,9a1,1,0,0,0,0,1.42l4.6,4.6H3.06a1,1,0,1,0,0,2H26.58L22,21.59A1,1,0,0,0,22,23a1,1,0,0,0,1.41,0l6.36-6.36a.88.88,0,0,0,0-1.27L23.42,9A1,1,0,0,0,22,9Z" />
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class='flex w-full py-2 hover:bg-gray-100 rounded-md cursor-pointer'>
+                                <div class='w-10'>#1</div>
+                                <div class='w-full'>What is JavaScript?</div>
+                                <a href="#">
+                                    <div class='w-24 text-blue-500 flex'>view
+                                        <svg viewBox="0 0 32 32" class="h-5 relative top-1 ml-2" fill="currentColor"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <title />
+                                            <g data-name="Layer 2" id="Layer_2">
+                                                <path
+                                                    d="M22,9a1,1,0,0,0,0,1.42l4.6,4.6H3.06a1,1,0,1,0,0,2H26.58L22,21.59A1,1,0,0,0,22,23a1,1,0,0,0,1.41,0l6.36-6.36a.88.88,0,0,0,0-1.27L23.42,9A1,1,0,0,0,22,9Z" />
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-
-    <footer class="w-full bg-white pb-3">
-        <center>
-            © Artizence 2022
-        </center>
-    </footer>
 </body>
 
 </html>

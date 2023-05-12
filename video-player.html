@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Hirecoop - The future</title>
+</head>
+
+<body>
+    <div class='bg-slate-100 min-h-screen w-full'>
+        <!-- -------logHeader---------- -->
+        <div
+            class='w-full max-h-20 px-5 lg:px-20 md:px-10 py-5 flex justify-between bg-white 2xl:max-w-[1550px] m-auto'>
+            <Link href="/dashboard">
+            <div class='flex'>
+                <img src="/assets/images/logo.svg" alt="Logo" class="h-9 w-9 mr-1" />
+                <h3 class='text-xl font-medium mt-1 font-inter'>Hireoop</h3>
+            </div>
+            </Link>
+            <div class="md:hidden h-8">
+                <button class="text-secondary-black focus:outline-none" id="sidemenubtn" onClick="toggleSideMenu()">
+                    <svg class="h-10 w-10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 6H20M4 12H20M4 18H20" stroke="currentColor" strokeWidth="2" strokeLinecap="round"
+                            strokeLinejoin="round">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+            <div class='hidden md:flex space-x-2'>
+                <div class='h-8 w-8 rounded-full cursor-pointer bg-blue-600'></div>
+            </div>
+        </div>
+
+
+        <!-- -------Main Content------------>
+        <div class="w-11/12 bg-white rounded-md h-[90vh] m-auto mt-5">
+            <h2 class="text-2xl text-center py-2">Question: What is JavaScript?</h2>
+            <a href="/">
+                <button class="text-blue-900 relative -top-8 left-5 flex">
+                    <svg viewBox="0 0 32 32" class="h-7 w-7 mr-2" fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <style>
+                                .cls-1 {
+                                    fill: none;
+                                }
+                            </style>
+                        </defs>
+                        <title />
+                        <g data-name="Layer 2" id="Layer_2">
+                            <path
+                                d="M13,26a1,1,0,0,1-.71-.29l-9-9a1,1,0,0,1,0-1.42l9-9a1,1,0,1,1,1.42,1.42L5.41,16l8.3,8.29a1,1,0,0,1,0,1.42A1,1,0,0,1,13,26Z" />
+                            <path d="M28,17H4a1,1,0,0,1,0-2H28a1,1,0,0,1,0,2Z" />
+                        </g>
+                        <g id="frame">
+                            <rect class="cls-1" height="32" width="32" />
+                        </g>
+                    </svg>
+                    Back
+                </button></a>
+            <video id="headvid" controls class="w-full lg:w-auto outline-none h-auto lg:h-[600px] rounded-2xl m-auto">
+                <source src="https://designtshirts.co/assets/images/slideshow1.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+</body>
+
+</html>

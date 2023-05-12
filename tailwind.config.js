@@ -1,19 +1,10 @@
+/** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "*.{html,js}",
-    "/index.html"
+    "./*.{html, js}"
   ],
   theme: {
-    extend: {
-      fontFamily: {
-        'rubik': ['Rubik', 'sans-serif'] 
-      },
-      colors: {
-        'primary': '#7b2cbf',
-        'secondary': '#6712b0',
-        'dark': '#131b1e'
-      }
-    },
+    extend: {},
   },
   plugins: [],
 }

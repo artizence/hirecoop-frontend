@@ -32,6 +32,3 @@ yarn-error.log*
 
 # vercel
 .vercel
-
-# ignore package-lock.json because yarn builds things faster resulting in faster build times.
-package-lock.json

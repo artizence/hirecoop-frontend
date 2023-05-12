@@ -1,21 +1,19 @@
 {
-  "name": "dukaneasy",
+  "name": "hirecoop-static",
   "version": "1.0.0",
-  "description": "Frontend for dukan easy",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "postcss assets/css/main.css -o assets/css/style.css",
-    "tailcss": "postcss assets/css/main.css -o assets/css/style.css"
+    "tail": "postcss ./assets/css/main.css -o ./assets/css/style.css"
   },
-  "author": "Rohit Mishra",
+  "author": "",
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^10.4.7",
-    "postcss": "^8.4.13",
-    "tailwindcss": "^3.0.24"
+    "postcss": "^8.4.14",
+    "tailwindcss": "^3.1.6"
   },
   "dependencies": {
-    "nodemon": "^2.0.16",
-    "postcss-cli": "^9.1.0"
+    "postcss-cli": "^10.0.0"
   }
 }

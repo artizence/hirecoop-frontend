@@ -1,64 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
-    <title>Hirecoop</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Hirecoop - The future</title>
 </head>
-
-<body class="bg-slate-100 overflow-x-hidden">
-
-    <div class='transition-all delay-700 2xl:max-w-[1550px] m-auto'>
-
-        <div>
-            <nav class="bg-white shadow-sm">
-                <div class="mx-auto px-12 flex justify-between">
-                    <div class="flex items-center justify-between h-16">
-                        <div class=" flex items-center">
-                            <a class="flex-shrink-0 flex" href="/">
-                                <img class="h-9 w-9" src="/assets/images/logo.svg" alt="Workflow" />
-                                <span
-                                    class="text-gray-900 block px-3 py-2 rounded-md text-base font-medium">Artizence - Hirecoop</span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="block">
-                        <div class="ml-4 flex items-center md:ml-6">
-                           <a href="/login" class="mt-5 mr-5">Login</a>
-                        </div>
-                    </div>
-                </div>
+<body>
+    <div class='w-full h-screen bg-gray-50'>
+      <!-- -------Header---------- -->
+      <nav class="bg-white shadow transition-all fixed z-30 w-full 2xl:max-w-[1600px]">
+        <div class='w-full max-h-18 px-5 lg:px-20 md:px-10 py-5 flex justify-between'>
+          <Link href="/">
+            <div class='flex'>
+              <img src="/assets/images/logo.svg" alt="Logo"
+                class="h-9 w-9 mr-1" />
+              <h3 class='text-xl font-medium mt-1 font-inter'>Hireoop</h3>
+            </div>
+          </Link>
+          <!-- <div class="md:hidden h-8">
+            <button class="text-secondary-black focus:outline-none" id="sidemenubtn">
+              <svg class="h-10 w-10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 6H20M4 12H20M4 18H20" stroke="currentColor" strokeWidth="2" strokeLinecap="round"
+                  strokeLinejoin="round">
+                </path>
+              </svg>
+            </button>
+          </div> -->
+          <div class='hidden md:flex space-x-2'>
+            <Link href='/dashboard'><button
+              class="py-1 px-4 text-secondary-dark hover:bg-secondary text-base rounded-lg">Product</button></Link>
+            <Link href='/pricing'><button
+              class="py-1 px-4 text-secondary-dark hover:bg-secondary text-base rounded-lg">Pricing</button></Link>
+            <Link href='/'><button
+              class="py-1 px-4 text-secondary-dark hover:bg-secondary text-base rounded-lg">More</button></Link>
+            <div class='h-5 w-[1px] mt-2 bg-gray-300'></div>
+            <Link href='/login'><button
+              class="py-1 px-4 text-secondary-dark hover:bg-secondary text-base rounded-lg">Login</button></Link>
+            <Link href='/signup'><button class="py-1 px-5 bg-primary hover:bg-blue-700 text-white text-base rounded-lg">Sign
+              Up</button></Link>
+          </div>
+          <div id="sideMenus" class='hidden h-screen fixed w-60 bg-gray-200 top-0 right-0 z-30'>
+            <button class="text-secondary-black focus:outline-none mb-6 mt-3">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512" class="h-10 w-10" fill="currentColor">
+                <path
+                  d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z" />
+              </svg>
+            </button>
+            <Link href='/'><button
+              class="py-2 px-5 font-bold hover:bg-blue-700 hover:text-white text-blue-600 text-base text-left w-full">Home</button></Link>
+            <Link href='/'><button
+              class="py-2 px-5 font-bold hover:bg-blue-700 hover:text-white text-blue-600 text-base text-left w-full">Product</button></Link>
+            <Link href='/'><button
+              class="py-2 px-5 font-bold hover:bg-blue-700 hover:text-white text-blue-600 text-base text-left w-full">Pricing</button></Link>
+            <Link href='/'><button
+              class="py-2 px-5 font-bold hover:bg-blue-700 hover:text-white text-blue-600 text-base text-left w-full">More</button></Link>
+            <div class='h-[2px] w-full bg-gray-300 my-4'></div>
+            <Link href='/'><button
+              class="py-2 px-5 font-bold hover:bg-blue-700 hover:text-white text-blue-600 text-base text-left w-full">Login</button></Link>
+            <Link href='/'><button
+              class="py-2 px-5 font-bold bg-primary hover:bg-blue-700 hover:text-white text-white text-base text-left w-full">Sign
+              Up</button></Link>
+          </div>
         </div>
-
-
-        <!-- <div class='h-'></div> -->
-        <div class='w-full px-5 lg:px-20 md:px-10 grid grid-cols-1 md:grid-cols-2 min-h-screen'>
-            <div class='w-full md:h-screen'>
-                <h1 class='text-6xl text-[#7b2cbf] font-extrabold font-inter mt-20 md:mt-60 xl:pr-10'>Automate your Hiring Process with HireCoop</h1>
-                
-                <p class='text-[#6712b0]-dark text-base rounded-lg xl:pr-20 py-5'>HireCoop Automation will automate your Hiring and save your HR time.</p>
-                <div class='flex space-x-3'>
-                  <a href='/dashboard'><button class="py-1 px-5 bg-[#7b2cbf] hover:bg-blue-700 text-white text-lg rounded-lg">Try Now</button></a>
-                  <!-- <a href='/'><button class="py-1 px-5 bg-gray-300 hover:bg-blue-400 text-[#7b2cbf] hover:text-white text-lg rounded-lg">Learn more</button></a> -->
     
-                </div>
-            </div>
-            <div class='w-full md:h-screen mt-10'>
-                <img class='h-80 md:h-[450px] md:mt-28' src="assets/images/undraw_meet_the_team_re_4h08.svg" alt="Home Image" />
-            </div>
-        </div>
-        </div>
+      </nav>
 
-    <footer class="w-full bg-white pb-3">
-        <center>
-            © <a href="https://www.artizence.com" class="text-blue-800" target="_blank">Artizence</a> 2022
-        </center>
-    </footer>
+
+    <!-- -------Main Content------------>
+    <!-- <div class="h-40"></div> -->
+    <div class='w-full px-5 lg:px-20 md:px-10 grid grid-cols-1 md:grid-cols-2 min-h-screen'>
+      <div class='w-full md:h-screen'>
+          <h1 class='text-6xl text-primary font-extrabold font-inter mt-20 md:mt-60 xl:pr-10'>Automate your Hiring Process with HireCoop</h1>
+          
+          <p class='text-secondary-dark text-base rounded-lg xl:pr-20 py-5'>HireCoop Automation will automate your Hiring and save your HR time</p>
+          <div class='flex space-x-3'>
+            
+            <a href='https://forms.gle/x7fAxPK6HeeLgRwg8' target="_blank">
+              <button class="py-1 px-5 bg-[#7b2cbf] hover:bg-purple-700 text-primary text-white text-lg">Try now</button></a>
+            <a href='https://drive.google.com/file/d/14-X0G5S74FObawfUcV_MWMWkMvJqBJE6/view?usp=sharing' target="_blank">
+              <button class="py-1 px-5 bg-gray-100 border border-[#7b2cbf]/20 hover:bg-gray-200 text-primary text-lg">See The Demo</button></a>
+
+
+          </div>
+      </div>
+      <div class='w-full md:h-screen mt-10'>
+          <img class='h-80 md:h-[450px] md:mt-28' src="/assets/images/undraw_meet_the_team_re_4h08.svg" alt="Home Image" />
+      </div>
+  </div>
+  </div>
+
+  <footer class="w-full bg-white pb-3">
+    <center>
+        © <a href="https://www.artizence.com" class="text-purple-800" target="_blank">Artizence</a> 2022
+    </center>
+</footer>
+    </div>
 </body>
-
 </html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <title>Hirecoop - The future</title>
+</head>
+<body>
+    <div class='bg-slate-100 min-h-screen w-full'>
+        <!-- -------logHeader---------- -->
+        <div class='w-full max-h-20 px-5 lg:px-20 md:px-10 py-5 flex justify-between bg-white 2xl:max-w-[1550px] m-auto'>
+            <Link href="/dashboard">
+            <div class='flex'>
+                <img src="/assets/images/logo.svg" alt="Logo" class="h-9 w-9 mr-1" />
+                <h3 class='text-xl font-medium mt-1 font-inter'>Hireoop</h3>
+            </div>
+            </Link>
+            <div class="md:hidden h-8">
+                <button class="text-secondary-black focus:outline-none" id="sidemenubtn" onClick="toggleSideMenu()">
+                    <svg class="h-10 w-10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 6H20M4 12H20M4 18H20" stroke="currentColor" strokeWidth="2" strokeLinecap="round"
+                            strokeLinejoin="round">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+            <div class='hidden md:flex space-x-2'>
+                <div class='h-8 w-8 rounded-full cursor-pointer bg-blue-600'></div>
+            </div>
+        </div>
+
+        <!-- -------Main Content------------>
+        <div class='md:flex w-full 2xl:max-w-[1550px] m-auto'>
+
+            <!-- ---------Side menu ----------- -->
+            <div class='flex md:block w-full md:w-20 bg-white pt-5 xl:h-screen'>
+                <a href='/chatbot-creation.html'>
+                  <button class='w-max md:w-full px-5 text-purple-500 py-2'>
+                    <img src='/assets/images/add_circle_icon.svg' alt=''/>
+                  </button>
+                </a>
+                <a href='/dashboard.html'>
+                  <button class='w-max md:w-full px-5 text-purple-500 py-2 md:mt-5'>
+                    <img src='/assets/images/dashboard_line_icon.svg' alt=''/>
+                  </button>
+                </a>
+            
+                <a href='/jobs.html'>
+            
+                  <button class='w-max md:w-full px-5 text-purple-500 py-2 md:mt-5'>
+                    <img src='/assets/images/list_schedule_icon.svg' alt=''/>
+                  </button>
+                </a>
+              </div>
+            <!-- ---------End Side menu ----------- -->
+            <div class="py-8 w-full px-2 md:px-4 lg:px-10 ">
+                <div class='w-full lg:flex'>
+                    <div class='w-full'>
+                        <div class='w-full max-h-[600px] bg-white mt-8 p-2 md:p-4 rounded-lg'>
+                            <div class='text-xl mt-3 mb-1'>Job Details</div>
+                            <div class='h-[1px] bg-gray-300 w-full'></div>
+                            <div class="grid grid-cols-2 gap-x-4">
+                                <div class="mb-6">
+                                    <label htmlFor="title"
+                                        class="block mb-2 text-sm font-medium text-gray-900">Title</label>
+                                    <input type="text" name="title" id="title"
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                                        placeholder="eg. Front end Developer" required />
+                                </div>
+                                <div class="mb-6">
+                                    <label htmlFor="skill"
+                                        class="block mb-2 text-sm font-medium text-gray-900">Skill</label>
+                                    <input type="text" name="skill" id="skill"
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                                        required />
+                                </div>
+                                <div class="mb-6">
+                                    <label htmlFor="job_des"
+                                        class="block mb-2 text-sm font-medium text-gray-900">Job
+                                        Description</label>
+                                    <input type="text" name="job_des" id="job_des"
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                                        placeholder="eg. Front end Developer" required />
+                                </div>
+                                <div class="mb-6">
+                                    <label htmlFor="passing_criteria"
+                                        class="block mb-2 text-sm font-medium text-gray-900">Passing
+                                        Criteria</label>
+                                    <input type="number" name="passing_criteria" id="passing_criteria"
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                                        required />
+                                </div>
+                                <div class="mb-6">
+                                    <label htmlFor="salary_package"
+                                        class="block mb-2 text-sm font-medium text-gray-900">salary_package</label>
+                                    <input type="number" name="salary_package" id="salary_package"
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                                        required />
+                                </div>
+                                <div class="mb-6">
+                                    <label htmlFor="experiance"
+                                        class="block mb-2 text-sm font-medium text-gray-900">Years of
+                                        experiance required</label>
+                                    <input type="number" name="experiance" id="experiance"
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                                        required />
+                                </div>
+                            </div>
+                        </div>
+                        <div class='w-full max-h-[600px] bg-white mt-8 p-2 md:p-4 rounded-lg'>
+                            <div class='text-xl mt-3 mb-1'>Add Question</div>
+                            <div class='h-[1px] bg-gray-300 w-full'></div>
+                            <div class="grid grid-cols-2 gap-x-4">
+                                <div class="mb-6">
+                                    <label htmlFor="question_type"
+                                        class="block mb-2 text-sm font-medium text-gray-900">Question
+                                        Type</label>
+                                    <select id="question_type" name="question_type"
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                                        <option selected value="select">Select</option>
+                                        <option value="artizence">Akshat</option>
+                                    </select>
+                                </div>
+                                <div class="mb-6">
+                                    <label htmlFor="priority"
+                                        class="block mb-2 text-sm font-medium text-gray-900">Periorty</label>
+                                    <select id="question_type" name="question_type"
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                                        <option selected value="40">40</option>
+                                        <option value="10">10</option>
+                                        <option value="20">20</option>
+                                    </select>
+                                </div>
+                                <div class="mb-6">
+                                    <label htmlFor="weight"
+                                        class="block mb-2 text-sm font-medium text-gray-900">Weight</label>
+                                    <input type="number" name="weight" id="weight"
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                                        placeholder="eg. 1, 2 ..." />
+                                </div>
+                                <div></div>
+                                <div class="mb-6">
+                                    <label htmlFor="question"
+                                        class="block mb-2 text-sm font-medium text-gray-900">Question</label>
+                                    <textarea name="question" id="question" cols="30" rows="10"
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 h-20 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                                        required></textarea>
+                                </div>
+                                <div class="mb-6">
+                                    <label htmlFor="answer"
+                                        class="block mb-2 text-sm font-medium text-gray-900">Required
+                                        answer</label>
+                                    <textarea name="answer" id="answer" cols="30" rows="10"
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 h-20 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                                        required></textarea>
+                                </div>
+                                <button
+                                    class="flex-shrink-0 mt-5 float-right w-max px-10 py-2 text-base font-semibold text-purple-600 border-2 border-purple-600 bg-white rounded-lg shadow-md hover:text-white hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-purple-200"
+                                    type="submit">
+                                    Add
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='w-5'></div>
+                    <div class='w-full bg-white mt-8 p-2 md:p-4 rounded-lg'>
+                        <div class='text-xl mt-3 mb-1'>Questions</div>
+                        <div class='h-[1px] bg-gray-300 w-full mb-2'></div>
+                        <div class='w-full border border-gray-200 rounded-lg p-3 flex'>
+                            <div class='w-20'>
+                                <div>#1</div>
+                                <div class='mt-2'>
+                                    <img src='/assets/cross_delete_icon.svg' alt=''/>
+                                </div>
+                                <div class='mt-2'>
+                                    <img src='/assets/edit_icon.svg' alt=''/>
+                                </div>
+                            </div>
+                            <div class='w-full'>
+                                <div class='w-full flex mb-2'>
+                                    <div class='w-full text-gray-500'>Type: <span class='text-black'>Salary</span></div>
+                                    <div class='w-full text-gray-500'>Priority: <span class='text-black'>10</span></div>
+                                    <div class='w-full text-gray-500'>Weight: <span class='text-black'>40</span></div>
+                                </div>
+                                <div class='w-full text-gray-500 mb-2'>Question: <span class='text-black'>what salary do you expect?</span></div>
+                                <div class='w-full text-gray-500'>Answer: <span class='text-black'>69 Billion per month</span></div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class='w-full'>
+                    <button
+                        class="flex-shrink-0 mt-5 float-right px-4 py-2 text-base font-semibold text-white bg-purple-600 rounded-lg shadow-md hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-purple-200"
+                        type="submit">
+                        Create Interview
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
